@@ -1,10 +1,8 @@
 package Ejercicio16;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -23,8 +21,9 @@ public class Main {
         Double altura = Double.parseDouble(bf.readLine());
 
         Persona persona1 = new Persona(nombre,edad,sexo,peso,altura);
-
+        persona1.setSexo(persona1.ComprobarSexo(sexo));
         Persona persona2 = new Persona(nombre,edad,sexo);
+        persona2.setSexo(persona2.ComprobarSexo(sexo));
 
         Persona persona3 = new Persona();
         persona3.setNombre("Persona3");
